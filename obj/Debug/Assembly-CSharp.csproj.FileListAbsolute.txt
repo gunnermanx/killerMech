@@ -1,0 +1,2 @@
+/Users/albert/Documents/unity/killerMech/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/albert/Documents/unity/killerMech/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
