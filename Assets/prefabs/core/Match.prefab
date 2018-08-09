@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1454355595831270}
+  m_RootGameObject: {fileID: 1196524582764150}
   m_IsPrefabAsset: 1
---- !u!1 &1454355595831270
+--- !u!1 &1196524582764150
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4518495945923804}
-  - component: {fileID: 114827317223447722}
+  - component: {fileID: 4729746801716244}
+  - component: {fileID: 114741441177470638}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: Match
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4518495945923804
+--- !u!4 &4729746801716244
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454355595831270}
+  m_GameObject: {fileID: 1196524582764150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,20 +40,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114827317223447722
+--- !u!114 &114741441177470638
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1454355595831270}
+  m_GameObject: {fileID: 1196524582764150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1068bcdb48d684400ab5389ba583e7dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 99e8fee4503c145a7bdce55ae936ea94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerManagerPrefab: {fileID: 1215394005452990, guid: f951d7c67b8fd4cda9faeae0589d6bd7,
+  dronePrefab: {fileID: 1520955245489840, guid: 3fadb248ed4f94ed1907f84a687c98fa,
     type: 2}
-  matchPrefab: {fileID: 1196524582764150, guid: e77fbd1d979468d4693c9b5b23dd1113,
+  bruiserPrefab: {fileID: 1492720379939792, guid: 4a251a06a5ad0486fafe8509cb50fb17,
     type: 2}
-  lobbyPrefab: {fileID: 1475081326039470, guid: 2a1245b2e1f8fbd49aaa736bc2ee7317,
+  acePrefab: {fileID: 1492720379939792, guid: 4a251a06a5ad0486fafe8509cb50fb17, type: 2}
+  stagePrefab: {fileID: 1283746114741612, guid: 032326da64690bd42954fc1fb0ad0a6e,
     type: 2}

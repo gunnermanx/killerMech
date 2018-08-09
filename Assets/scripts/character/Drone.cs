@@ -10,19 +10,18 @@ public class Drone : AbstractMech {
 
     private bool holdingMineral = false;
 
-	private void Awake()
-	{
+    private void Awake() {
         base.Awake();
 
         MechConfig mechConfig;
-        mechConfig.maxJumpHeight = 1.5f;
-        mechConfig.minJumpHeight = 0.3f;
-        mechConfig.jumpTime = 0.6f;
+        mechConfig.maxJumpHeight = 2.5f;
+        mechConfig.minJumpHeight = 0.5f;
+        mechConfig.jumpTime = 0.5f;
         mechConfig.boostTime = 0.0f;
         mechConfig.canBoost = false;
         mechConfig.canPickup = true;
         mechConfig.canDive = false;
-        mechConfig.groundSpeed = 2.0f;
+        mechConfig.groundSpeed = 3.2f;
 
         this.Initialize(mechConfig);
 
@@ -30,13 +29,11 @@ public class Drone : AbstractMech {
         team = Team.RED;
 
         pickupBox = new Vector3(1.0f, 1.0f, 0.0f);
-	}
+    }
 
-    private void FixedUpdate()
-    {
+    private void FixedUpdate() {
         Collider2D c = Physics2D.OverlapBox(gameObject.transform.position, pickupBox, 0f, mineralLayer);
-        if (c != null)
-        {
+        if (c != null) {
 
             Debug.Log("collided with minerals");
             c.gameObject.transform.parent = gameObject.transform;

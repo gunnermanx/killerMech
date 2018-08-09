@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class MovementController : MonoBehaviour
-{
+public class MovementController : MonoBehaviour {
     private const float COLLIDER_EPSILON = 0.015f;
     private const int NUM_H_RAYS = 4;
     private const int NUM_V_RAYS = 4;
@@ -18,8 +17,7 @@ public class MovementController : MonoBehaviour
     public CollisionInfo collisions;
 
 
-    struct RaycastOrigins
-    {
+    struct RaycastOrigins {
         public Vector2 topRight;
         public Vector2 bottomRight;
         public Vector2 bottomLeft;
@@ -36,8 +34,7 @@ public class MovementController : MonoBehaviour
     }
 
 
-    public void Move(Vector2 velocity)
-    {
+    public void Move(Vector2 velocity) {
         RaycastOrigins ro = CalcRaycastsOrigins();
         collisions.Reset();
 
@@ -48,18 +45,14 @@ public class MovementController : MonoBehaviour
     }
 
 
-    private void Start()
-    {
+    private void Awake() {
+        Debug.Log("Awake on drone");
         collider = this.GetComponent<BoxCollider2D>();
-
         CalcRayIntervals();
-
-
         groundCollisionMask = LayerMask.GetMask("Ground");
     }
 
-    private void CalcRayIntervals()
-    {
+    private void CalcRayIntervals() {
         Bounds bounds = collider.bounds;
         bounds.Expand(COLLIDER_EPSILON * -2);
 
@@ -67,8 +60,7 @@ public class MovementController : MonoBehaviour
         vRayInterval = bounds.size.x / (NUM_V_RAYS - 1);
     }
 
-    private RaycastOrigins CalcRaycastsOrigins()
-    {
+    private RaycastOrigins CalcRaycastsOrigins() {
         Bounds bounds = collider.bounds;
         bounds.Expand(COLLIDER_EPSILON * -2);
 
@@ -82,20 +74,17 @@ public class MovementController : MonoBehaviour
     }
 
 
-    private void CastHRays(RaycastOrigins ro, ref Vector2 velocity)
-    {
+    private void CastHRays(RaycastOrigins ro, ref Vector2 velocity) {
         float rayDir = Mathf.Sign(velocity.x);
         float rayLength = Mathf.Abs(velocity.x) + COLLIDER_EPSILON;
 
-        for (int i = 0; i < NUM_H_RAYS; i++)
-        {
+        for (int i = 0; i < NUM_H_RAYS; i++) {
             Vector2 rayOrigin = (rayDir > 0) ? ro.bottomRight : ro.bottomLeft;
             rayOrigin += Vector2.up * (i * hRayInterval);
 
             Debug.DrawRay(rayOrigin, Vector2.right * rayDir * rayLength, Color.red);
             RaycastHit2D hit2D = Physics2D.Raycast(rayOrigin, Vector2.right * rayDir, rayLength, groundCollisionMask);
-            if (hit2D)
-            {
+            if (hit2D) {
                 velocity.x = (hit2D.distance - COLLIDER_EPSILON) * rayDir;
                 rayLength = hit2D.distance;
 
@@ -106,20 +95,17 @@ public class MovementController : MonoBehaviour
     }
 
 
-    private void CastVRays(RaycastOrigins ro, ref Vector2 velocity)
-    {
+    private void CastVRays(RaycastOrigins ro, ref Vector2 velocity) {
         float rayDir = Mathf.Sign(velocity.y);
         float rayLength = Mathf.Abs(velocity.y) + COLLIDER_EPSILON;
 
-        for (int i = 0; i < NUM_V_RAYS; i++)
-        {
+        for (int i = 0; i < NUM_V_RAYS; i++) {
             Vector2 rayOrigin = (rayDir > 0) ? ro.topLeft : ro.bottomLeft;
             rayOrigin += Vector2.right * (i * vRayInterval + velocity.x);
 
             Debug.DrawRay(rayOrigin, Vector2.up * rayDir * rayLength, Color.red);
             RaycastHit2D hit2D = Physics2D.Raycast(rayOrigin, Vector2.up * rayDir, rayLength, groundCollisionMask);
-            if (hit2D)
-            {
+            if (hit2D) {
                 velocity.y = (hit2D.distance - COLLIDER_EPSILON) * rayDir;
                 rayLength = hit2D.distance;
 

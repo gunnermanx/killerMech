@@ -14,14 +14,12 @@ public class CollisionFowarder : MonoBehaviour {
     private void TriggerOnCollisionExit2DForwarder(Collision2D c) { if (onCollisionExit2D != null) onCollisionExit2D(c); }
 
 
-	private void OnCollisionEnter2D(Collision2D collision)
-    {
+    private void OnCollisionEnter2D(Collision2D collision) {
         Debug.Log("Collision Enter!");
         TriggerOnCollisionEnter2DForwarder(collision);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
+    private void OnCollisionExit2D(Collision2D collision) {
         TriggerOnCollisionExit2DForwarder(collision);
     }
 }

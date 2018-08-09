@@ -1,14 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class Bootstrap : MonoBehaviour
-{
+public class Bootstrap : MonoBehaviour {
     public GameObject gameManager;
 
-    void Awake()
-    {
-        if (GameManager.instance == null)
-        {
+    void Awake() {
+        if (GameManager.instance == null) {
             Instantiate(gameManager);
         }
     }

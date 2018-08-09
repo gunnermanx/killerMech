@@ -5,16 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    private const string LOBBY_SCENE = "LobbyScene";
+    private const string MATCH_SCENE = "MatchScene";
+
     public GameObject playerManagerPrefab;
-    
+
+    public GameObject matchPrefab;
+    public GameObject lobbyPrefab;
+
     public static GameManager instance = null;
 
     private PlayerManager playerManager;
+    private Match match;
+    private Lobby lobby;
 
-    private void Awake()
-    {        
-        if (instance == null)
-        {
+    public void StartMatch() {
+        SceneManager.LoadScene(MATCH_SCENE, LoadSceneMode.Single);
+    }
+
+    private void Awake() {
+        if (instance == null) {
             instance = this;
         } else if (instance != this) {
             Destroy(gameObject);
@@ -23,30 +33,38 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
-	private void Start()
-	{        
-        InitializeManagers();
-	}
+    private void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
 
-	private void InitializeManagers()
-    {
+    private void OnDisable() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void Start() {
+        InitializeManagers();
+        CreateLobby();
+    }
+
+    private void InitializeManagers() {
         GameObject playerManagerGO = Instantiate(playerManagerPrefab);
         playerManager = playerManagerGO.GetComponent<PlayerManager>();
         playerManager.Initialize();
         playerManagerGO.transform.parent = this.transform;
     }
 
-    private void StartMatch()
-    {
-        Debug.Log("Starting match");
-        SceneManager.LoadScene("Match", LoadSceneMode.Single);
+    private void CreateLobby() {
+        GameObject lobbyGO = Instantiate(lobbyPrefab);
+        lobby = lobbyGO.GetComponent<Lobby>();
+        lobby.Initialize();
     }
 
-	private void Update()
-	{
-        if (Input.GetButtonDown("Blue_Ace_action"))
-        {
-            StartMatch();    
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        Debug.Log("OnSceneLoaded: " + scene.name);
+        if (scene.name == MATCH_SCENE) {
+            GameObject matchMangerGO = Instantiate(matchPrefab);
+            match = matchMangerGO.GetComponent<Match>();
+            match.Initialize();
         }
-	}
+    }
 }
