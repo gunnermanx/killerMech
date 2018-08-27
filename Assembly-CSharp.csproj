@@ -66,14 +66,29 @@
     <Compile Include="Assets\scripts\character\Bruiser.cs" />
     <Compile Include="Assets\scripts\character\CollisionFowarder.cs" />
     <Compile Include="Assets\scripts\character\Drone.cs" />
+    <Compile Include="Assets\scripts\character\EnemyDetection.cs" />
+    <Compile Include="Assets\scripts\character\FixedCamera.cs" />
     <Compile Include="Assets\scripts\character\HitBox.cs" />
+    <Compile Include="Assets\scripts\character\Modifiers\BoostModifier.cs" />
+    <Compile Include="Assets\scripts\character\Modifiers\DiveModifier.cs" />
+    <Compile Include="Assets\scripts\character\Modifiers\ICharacterModifer.cs" />
     <Compile Include="Assets\scripts\core\Bootstrap.cs" />
     <Compile Include="Assets\scripts\core\GameManager.cs" />
     <Compile Include="Assets\scripts\core\Lobby.cs" />
     <Compile Include="Assets\scripts\core\Match.cs" />
+    <Compile Include="Assets\scripts\core\Stage.cs" />
+    <Compile Include="Assets\scripts\effects\EffectAnimation.cs" />
     <Compile Include="Assets\scripts\movement\MovementController.cs" />
     <Compile Include="Assets\scripts\player\Player.cs" />
     <Compile Include="Assets\scripts\player\PlayerManager.cs" />
+    <Compile Include="Assets\scripts\props\AbstractBaseShrine.cs" />
+    <Compile Include="Assets\scripts\props\Base.cs" />
+    <Compile Include="Assets\scripts\props\MineralCollector.cs" />
+    <Compile Include="Assets\scripts\props\MineralSpawner.cs" />
+    <Compile Include="Assets\scripts\props\Motherlode.cs" />
+    <Compile Include="Assets\scripts\props\SpeedShrine.cs" />
+    <Compile Include="Assets\scripts\props\TransformationShrine.cs" />
+    <Compile Include="Assets\scripts\test\TestBootstrap.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/albert/Documents/killerMech/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

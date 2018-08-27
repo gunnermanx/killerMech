@@ -14,17 +14,17 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - HurtBox
-  - HitBox
-  - 
+  - BlueHurtBox
+  - RedHurtBox
+  - BlueHitBox
+  - RedHitBox
   - Mineral
   - MineralHeld
   - 
+  - Drone
+  - Ace
   - 
-  - 
-  - 
-  - 
+  - Mech
   - 
   - 
   - 

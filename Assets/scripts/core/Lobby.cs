@@ -26,10 +26,9 @@ public class Lobby : MonoBehaviour {
 
     private void RegisterDelegates() {
         List<Player> bluePlayers = PlayerManager.instance.GetPlayers(Player.Team.Blue);
-        foreach (Player p in bluePlayers) {
+        foreach(Player p in bluePlayers) {
             p.OnActionPressed += OnPlayerActionPressed;
         }
-
         List<Player> redPlayers = PlayerManager.instance.GetPlayers(Player.Team.Red);
         foreach (Player p in redPlayers) {
             p.OnActionPressed += OnPlayerActionPressed;
@@ -41,7 +40,6 @@ public class Lobby : MonoBehaviour {
         foreach (Player p in bluePlayers) {
             p.OnActionPressed -= OnPlayerActionPressed;
         }
-
         List<Player> redPlayers = PlayerManager.instance.GetPlayers(Player.Team.Red);
         foreach (Player p in redPlayers) {
             p.OnActionPressed -= OnPlayerActionPressed;

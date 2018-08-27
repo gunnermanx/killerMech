@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: 7ea4531c647365148b049617b1f781ae
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Red Bruiser - Walk_0
+    21300002: Red Bruiser - Walk_1
+    21300004: Red Bruiser - Walk_2
+    21300006: Red Bruiser - Walk_3
+    21300008: Red Bruiser - Walk_4
+    21300010: Red Bruiser - Walk_5
+    21300012: Red Bruiser - Walk_6
+    21300014: Red Bruiser - Walk_7
+    21300016: Red Bruiser - Walk_8
+    21300018: Red Bruiser - Walk_9
+    21300020: Red Bruiser - Walk_10
+    21300022: Red Bruiser - Walk_11
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 384
+        width: 67
+        height: 62
+      alignment: 9
+      pivot: {x: 0.67164177, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7205459ff6e24541b81748146fd8b7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 384
+        width: 56
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8035714, y: 0.4920635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638db89de8e6e354a8228a7d9b70c138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 384
+        width: 54
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8333333, y: 0.4920635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77488b785c6d2c14c8f81d1de047d19e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 256
+        width: 58
+        height: 62
+      alignment: 9
+      pivot: {x: 0.7758621, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d86bb06292be94993fadb066b5355e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 256
+        width: 61
+        height: 62
+      alignment: 9
+      pivot: {x: 0.73770493, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5352271b79c25f6408db976caeaeb5c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 256
+        width: 57
+        height: 62
+      alignment: 9
+      pivot: {x: 0.7894737, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9849cedfaa10e394a80e843cfe851c97
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 128
+        width: 55
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8181818, y: 0.4920635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea0aed3be5a31f499fb8067c64bb880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_7
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 128
+        width: 56
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8035714, y: 0.4920635}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0537b0572cba8c14581acc3bb053e00e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 130
+        width: 64
+        height: 61
+      alignment: 9
+      pivot: {x: 0.703125, y: 0.5081967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb59c92759883234d9261fc7d7a6a268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red Bruiser - Walk_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 67
+        height: 62
+      alignment: 9
+      pivot: {x: 0.67164177, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93c6942c2cfdb4409c0814cb1c5eedc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 384f181f0b8d80846a6efb625bc5a22a
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

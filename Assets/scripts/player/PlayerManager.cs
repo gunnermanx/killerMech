@@ -27,15 +27,18 @@ public class PlayerManager : MonoBehaviour {
     }
 
     public void Initialize() {
-        foreach (Player.Team t in Enum.GetValues(typeof(Player.Team))) {
-            foreach (Player.Id i in Enum.GetValues(typeof(Player.Id))) {
-                CreatePlayer(i, t);
-            }
+        foreach (Player.Id i in Enum.GetValues(typeof(Player.Id))) {
+            CreatePlayer(i, Player.Team.Blue);
+        }
+        foreach (Player.Id i in Enum.GetValues(typeof(Player.Id))) {
+            CreatePlayer(i, Player.Team.Red);
         }
     }
 
     public List<Player> GetPlayers(Player.Team t) {
-        return new List<Player>(blueTeam.Values);
+        return (t == Player.Team.Blue) ? 
+            new List<Player>(blueTeam.Values) :
+            new List<Player>(redTeam.Values);
     }
 
     public Player GetPlayer(Player.Team t, Player.Id i) {
@@ -43,7 +46,7 @@ public class PlayerManager : MonoBehaviour {
     }
 
     private void CreatePlayer(Player.Id id, Player.Team team) {
-        GameObject playerGO = new GameObject("Player" + id.ToString());
+        GameObject playerGO = new GameObject("Player" + team.ToString() + id.ToString());
         Player player = playerGO.AddComponent<Player>();
         player.Initialize(id, team);
 
@@ -53,6 +56,6 @@ public class PlayerManager : MonoBehaviour {
         } else {
             redTeam.Add(id, player);
             playerGO.transform.SetParent(redTeamParent);
-        }
+        }       
     }
 }

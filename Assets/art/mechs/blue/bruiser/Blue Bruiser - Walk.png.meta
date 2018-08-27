@@ -1,0 +1,311 @@
+fileFormatVersion: 2
+guid: d03090d17355b584d835659e18ecb840
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Blue Bruiser - Walk_0
+    21300002: Blue Bruiser - Walk_1
+    21300004: Blue Bruiser - Walk_2
+    21300006: Blue Bruiser - Walk_3
+    21300008: Blue Bruiser - Walk_4
+    21300010: Blue Bruiser - Walk_5
+    21300012: Blue Bruiser - Walk_6
+    21300014: Blue Bruiser - Walk_7
+    21300016: Blue Bruiser - Walk_8
+    21300018: Blue Bruiser - Walk_9
+    21300020: Blue Bruiser - Walk_10
+    21300022: Blue Bruiser - Walk_11
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 384
+        width: 67
+        height: 62
+      alignment: 9
+      pivot: {x: 0.67164177, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8cad4cb761561498aa6bdab0a2dfd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 385
+        width: 56
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8035714, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf5693743c044244a53b2667c64b1c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 384
+        width: 54
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8333333, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3781ba9c067a214899aa420e8d9471c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_3
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 257
+        width: 58
+        height: 62
+      alignment: 9
+      pivot: {x: 0.7758621, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9c1b8f2993e6584faca482b7036f021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_4
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 256
+        width: 61
+        height: 62
+      alignment: 9
+      pivot: {x: 0.73770493, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4696423cc15e44c9f86a70dc49a940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 256
+        width: 57
+        height: 62
+      alignment: 9
+      pivot: {x: 0.7894737, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ba7c8e45d90cf42a4a3b92a98a2618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 128
+        width: 55
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8181818, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d34a70843160b4bbf962086997725b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_7
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 128
+        width: 56
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8035714, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6c913b791839a48bf5b121ca6128b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 130
+        width: 64
+        height: 61
+      alignment: 9
+      pivot: {x: 0.703125, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee3ba96b72437d4d816691622720f53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue Bruiser - Walk_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 67
+        height: 62
+      alignment: 9
+      pivot: {x: 0.67164177, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb84d87f10305a48bdfd4a9aadd2443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c2354512f5fa00a4eaa43fb65db8d1df
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

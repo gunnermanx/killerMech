@@ -46,7 +46,6 @@ public class MovementController : MonoBehaviour {
 
 
     private void Awake() {
-        Debug.Log("Awake on drone");
         collider = this.GetComponent<BoxCollider2D>();
         CalcRayIntervals();
         groundCollisionMask = LayerMask.GetMask("Ground");

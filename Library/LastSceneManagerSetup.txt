@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/Match.unity
+- path: Assets/scenes/LobbyScene.unity
   isLoaded: 1
   isActive: 1

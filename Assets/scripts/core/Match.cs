@@ -4,59 +4,70 @@ using UnityEngine;
 
 public class Match : MonoBehaviour {
 
-    public GameObject dronePrefab;
-    public GameObject bruiserPrefab;
-    public GameObject acePrefab;
+    [SerializeField] private GameObject blueDronePrefab;
+    [SerializeField] private GameObject blueBruiserPrefab;
+    [SerializeField] private GameObject blueAcePrefab;
+    [SerializeField] private GameObject redDronePrefab;
+    [SerializeField] private GameObject redBruiserPrefab;
+    [SerializeField] private GameObject redAcePrefab;
 
     public GameObject stagePrefab;
 
-    private GameObject stage;
+    private Stage stage;
 
     private int blueAceLives = 3;
     private int redAceLives = 3;
-
-
-
-    private void Update() {
-
-    }
+    
 
     public void Initialize() {
         SpawnStage();
-        SpawnMinerals();
-        SpawnUpgradeStations();
-
         RegisterDelegates();
     }
 
     private void SpawnMechForPlayer(Player p) {
         GameObject mechGO;
+        AbstractMech mech;
+        
+        Vector3 spawnLocation = stage.GetSpawnPoint(p.team, p.id);
+
         if (p.id != Player.Id.Ace) {
-            mechGO = (GameObject)Instantiate(bruiserPrefab);
-            AbstractMech mech = mechGO.GetComponent<Bruiser>();
-            p.AssignMech(mech);
+            mechGO = (p.team == Player.Team.Blue) ?
+                (GameObject)Instantiate(blueDronePrefab, spawnLocation, Quaternion.identity) :
+                (GameObject)Instantiate(redDronePrefab, spawnLocation, Quaternion.identity);
+            mech = mechGO.GetComponent<Drone>();
         } else {
-            mechGO = (GameObject)Instantiate(acePrefab);
-            AbstractMech mech = mechGO.GetComponent<Ace>();
-            p.AssignMech(mech);
+            mechGO = (p.team == Player.Team.Blue) ?
+                (GameObject)Instantiate(blueBruiserPrefab, spawnLocation, Quaternion.identity) :
+                (GameObject)Instantiate(redBruiserPrefab, spawnLocation, Quaternion.identity);
+            mech = mechGO.GetComponent<Ace>();
         }
-        mechGO.name = p.team.ToString() + "_" + p.id.ToString();
+
+        p.AssignMech(mech);
+        mech.owner = p;
+        mechGO.name = p.team.ToString() + "_" + p.id.ToString();        
     }
 
     private void SpawnStage() {
-        stage = (GameObject)Instantiate(stagePrefab);
+        GameObject stageGO = (GameObject)Instantiate(stagePrefab);
+        stage = stageGO.GetComponent<Stage>();
+        stage.Initialize();
+        stage.ListenForEconWinCondition(HandleEconVictoryReached);       
     }
 
-    private void SpawnMinerals() {
+    private void HandleEconVictoryReached(Player.Team t) {
+        Debug.Log("YAY team " + t.ToString() + " has reached econmoic victory");
+    }
+
+    private void HandleMilitaryVictoryReached(Player.Team t) {
 
     }
 
-    private void SpawnUpgradeStations() {
+    private void HandleTugOfWarVictoryReached(Player.Team t) {
 
     }
     
     private void OnPlayerActionPressed(Player.Team t, Player.Id i) {
-        Debug.Log("match => delegate triggered " + t.ToString() + " " + i.ToString());
+        //Debug.Log("match => delegate triggered " + t.ToString() + " " + i.ToString());
 
         Player p = PlayerManager.instance.GetPlayer(t, i);
         if (!p.HasMech()) {
@@ -92,7 +103,7 @@ public class Match : MonoBehaviour {
 
         List<Player> redPlayers = PlayerManager.instance.GetPlayers(Player.Team.Red);
         foreach (Player p in redPlayers) {
-            p.OnActionPressed += OnPlayerActionPressed;
+            p.OnActionPressed -= OnPlayerActionPressed;
         }
     }
 

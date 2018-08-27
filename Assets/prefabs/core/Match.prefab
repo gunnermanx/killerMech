@@ -51,10 +51,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99e8fee4503c145a7bdce55ae936ea94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dronePrefab: {fileID: 1520955245489840, guid: 3fadb248ed4f94ed1907f84a687c98fa,
+  blueDronePrefab: {fileID: 1520955245489840, guid: 3fadb248ed4f94ed1907f84a687c98fa,
     type: 2}
-  bruiserPrefab: {fileID: 1492720379939792, guid: 4a251a06a5ad0486fafe8509cb50fb17,
+  blueBruiserPrefab: {fileID: 1492720379939792, guid: 4a251a06a5ad0486fafe8509cb50fb17,
     type: 2}
-  acePrefab: {fileID: 1492720379939792, guid: 4a251a06a5ad0486fafe8509cb50fb17, type: 2}
-  stagePrefab: {fileID: 1283746114741612, guid: 032326da64690bd42954fc1fb0ad0a6e,
+  blueAcePrefab: {fileID: 1938074303227146, guid: 6b832f10c057fea449e5ffa96079de62,
+    type: 2}
+  redDronePrefab: {fileID: 1520955245489840, guid: 490b082567691414180813278e2bf7a5,
+    type: 2}
+  redBruiserPrefab: {fileID: 1492720379939792, guid: 3118c4cc88f18b64caca8aa482e58e55,
+    type: 2}
+  redAcePrefab: {fileID: 1938074303227146, guid: 6b832f10c057fea449e5ffa96079de62,
+    type: 2}
+  stagePrefab: {fileID: 1283746114741612, guid: 020a8c49cbfe0ab4a8a0113efe06f10e,
     type: 2}

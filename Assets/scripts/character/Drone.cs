@@ -4,41 +4,113 @@ using UnityEngine;
 
 public class Drone : AbstractMech {
 
-    Vector3 pickupBox;
     public LayerMask mineralLayer;
     public LayerMask mineralHeldLayer;
-
-    private bool holdingMineral = false;
+    public Transform mineralParent;
+    
+    private GameObject heldMineral = null;
+    private Vector3 pickupBox;
+    
+    private Motherlode motherlode = null;
 
     private void Awake() {
         base.Awake();
+        Initialize();
+        pickupBox = new Vector3(1.0f, 1.0f, 0.0f);       
+    }
 
-        MechConfig mechConfig;
-        mechConfig.maxJumpHeight = 2.5f;
-        mechConfig.minJumpHeight = 0.5f;
-        mechConfig.jumpTime = 0.5f;
-        mechConfig.boostTime = 0.0f;
-        mechConfig.canBoost = false;
-        mechConfig.canPickup = true;
-        mechConfig.canDive = false;
-        mechConfig.groundSpeed = 3.2f;
-
-        this.Initialize(mechConfig);
-
-        // TEMP
-        team = Team.RED;
-
-        pickupBox = new Vector3(1.0f, 1.0f, 0.0f);
+    public override void Move(Player.InputArgs input) {
+        if (motherlode != null) {
+            input.movement.y = 0.0f;
+            if (input.actionPressed) {
+                StopRidingMotherlode();
+            } else {
+                input.movement.x = 0.0f;
+            }
+        }
+        base.Move(input);
     }
 
     private void FixedUpdate() {
         Collider2D c = Physics2D.OverlapBox(gameObject.transform.position, pickupBox, 0f, mineralLayer);
-        if (c != null) {
-
-            Debug.Log("collided with minerals");
-            c.gameObject.transform.parent = gameObject.transform;
-            c.gameObject.transform.localPosition = new Vector3(0f, 1f, 0f);
-            c.gameObject.layer = LayerMask.NameToLayer("MineralHeld");
+        if (c != null && !IsHoldingMineral()) {
+            PickupMineral(c.gameObject);
         }
+    }
+
+    public bool IsHoldingMineral() {
+        return heldMineral != null;
+    }
+
+
+
+
+    public void StartRidingMotherlode(Motherlode motherlode) {
+        this.motherlode = motherlode;
+        lockYMovement = true;
+    }
+
+    public void StopRidingMotherlode() {
+        lockYMovement = false;
+        motherlode.DettachDrone(this);
+        this.motherlode = null;
+    }
+
+
+
+
+    public void StartTransformation() {
+        SpendMineral();
+        ignoresInput = true;
+    }
+
+    public void CompleteTransformation() {
+        //DESTROY THIS
+        Destroy(gameObject);
+    }
+    
+    public void StartSpeedBuff() {
+        SpendMineral();
+        ignoresInput = true;
+    }
+
+    public void CompleteSpeedBuff() {
+        hasSpeedBuff = true;
+        ignoresInput = false;
+        Initialize();
+    }
+
+    public bool HasSpeedBuff() {
+        return hasSpeedBuff;
+    }
+
+    public void StartDepositMineral() {
+        SpendMineral();
+        ignoresInput = true;
+        // Turn invulnerable
+    }
+
+    public void CompleteDepositMineral() {
+        ignoresInput = false;
+    }
+
+    private void PickupMineral(GameObject mineral) {
+        mineral.transform.parent = mineralParent;
+        mineral.transform.localPosition = Vector3.zero;
+        mineral.layer = LayerMask.NameToLayer("MineralHeld");
+        heldMineral = mineral;
+
+        
+    }
+
+    private void DropMineral() {
+        heldMineral.transform.parent = gameObject.transform.parent;
+        heldMineral.layer = LayerMask.NameToLayer("Mineral");
+        heldMineral = null;
+    }
+
+    private void SpendMineral() {
+        Destroy(heldMineral);
+        heldMineral = null;
     }
 }
